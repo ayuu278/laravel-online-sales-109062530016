@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -63,7 +64,7 @@ class CartController extends Controller
     private function cartData(Request $request): array
     {
         $cart = $request->session()->get('cart', []);
-        $products = Product::whereIn(()'id', array_keys($cart))->get()->keyBy('id');
+        $products = Product::whereIn('id', array_keys($cart))->get()->keyBy('id');
         $items = collect();
         $subtotal = 0;
 
