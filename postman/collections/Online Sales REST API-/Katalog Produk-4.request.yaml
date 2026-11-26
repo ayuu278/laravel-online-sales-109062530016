@@ -1,0 +1,9 @@
+$kind: http-request
+name: Katalog Produk
+url: http://127.0.0.1:8000/api/v1/products?ready=1
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  ready: "1"
+order: 4000
