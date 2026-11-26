@@ -1,0 +1,28 @@
+$kind: http-request
+name: Checkout - tanpa token
+url: http://127.0.0.1:8000/api/v1/checkout
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: json
+  content: "{\r
+
+    \  \"recipient_name\": \"Ayu\",\r
+
+    \  \"phone\": \"081234567890\",\r
+
+    \  \"address\": \"Jl. Praktikum No. 10, Semarang\",\r
+
+    \  \"shipping_service_id\": 1,\r
+
+    \  \"items\": [\r
+
+    \    {\"product_id\": 6, \"quantity\": 2},\r
+
+    \    {\"product_id\": 4, \"quantity\": 1}\r
+
+    \  ]\r
+
+    }"
+order: 11000

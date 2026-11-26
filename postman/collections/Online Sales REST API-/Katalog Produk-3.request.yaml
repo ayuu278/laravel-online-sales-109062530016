@@ -1,0 +1,9 @@
+$kind: http-request
+name: Katalog Produk
+url: http://127.0.0.1:8000/api/v1/products?max_price=50000
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  max_price: "50000"
+order: 3000
