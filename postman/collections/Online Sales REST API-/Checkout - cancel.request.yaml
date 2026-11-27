@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/orders/{{order_id}}/cancel"
+method: PATCH
+headers:
+  Accept: application/json
+auth:
+  type: bearer
+  credentials:
+    token: "{{customer_token}}"
+scripts:
+  - type: afterResponse
+    code: ""
+    language: text/javascript
+order: 23000

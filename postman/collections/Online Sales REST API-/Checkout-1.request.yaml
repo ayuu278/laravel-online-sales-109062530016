@@ -1,6 +1,6 @@
 $kind: http-request
 name: Checkout
-url: http://127.0.0.1:8000/api/v1/checkout
+url: "{{base_url}}/checkout"
 method: POST
 headers:
   Accept: application/json
@@ -18,9 +18,7 @@ body:
 
     \  \"items\": [\r
 
-    \    {\"product_id\": 6, \"quantity\": 2},\r
-
-    \    {\"product_id\": 4, \"quantity\": 1}\r
+    \    {\"product_id\": 1, \"quantity\": 2}\r
 
     \  ]\r
 
@@ -29,4 +27,8 @@ auth:
   type: bearer
   credentials:
     token: "{{customer_token}}"
+scripts:
+  - type: afterResponse
+    code: pm.collectionVariables.set('order_id', pm.response.json().data.id);
+    language: text/javascript
 order: 15000

@@ -1,7 +1,7 @@
 $kind: http-request
 name: Admin - Confirm
-url: http://127.0.0.1:8000/api/v1/admin/orders
-method: GET
+url: "{{base_url}}/admin/orders/{{order_id}}/confirm"
+method: PATCH
 headers:
   Accept: application/json
 auth:

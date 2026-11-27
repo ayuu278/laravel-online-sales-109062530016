@@ -14,4 +14,8 @@ body:
     \  \"device_name\": \"Postman Admin\"\r
 
     }"
+scripts:
+  - type: afterResponse
+    code: pm.collectionVariables.set('admin_token', pm.response.json().access_token);
+    language: text/javascript
 order: 14000
