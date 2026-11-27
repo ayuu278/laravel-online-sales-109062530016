@@ -4,3 +4,4 @@ variables:
   customer_token: ""
   admin_token: ""
   order_id: ""
+  base_url: ""
